@@ -175,7 +175,7 @@ export default function Header() {
                 className=" list-none  font-semibold text-lg ">
                 <a
                   download="resume.pdf"
-                  href="./src/assets/resume.pdf"
+                  href="src/assets/resume.pdf"
                   className="hover:border-b-4  border-b-slate-900 cursor-pointer  pb-2">
                   Download CV
                 </a>
