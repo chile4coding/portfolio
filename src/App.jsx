@@ -8,9 +8,18 @@ import Projects from "./component/Projects";
 import Experience from "./component/Experience";
 import Contact from "./component/Contact";
 import Footer from "./component/Footer";
+import Aos from "aos";
+
 const LazyHero = React.lazy(() => import("./component/Hero"));  
 
 function App() {
+  useEffect(() => {
+    Aos.init({
+      duration: 6000,
+    });
+  }, []);
+
+
   return (
     <>
               <Header />
@@ -24,7 +33,7 @@ function App() {
                   <span className="loading loading-infinity loading-lg text-6xl"></span>
                 </div>
               }>
-              <div className="max-w-[80%]  mx-auto z-0 ">
+              <div className="max-w-[80%]  mx-auto z-0 sm:max-w-[95%] ">
                 <LazyHero />
                 <About />
 

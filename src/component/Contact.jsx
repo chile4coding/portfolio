@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-  import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 
 // import { useFormik } from "formik";
 // import { sendEmail as send } from "./sendMail";
@@ -45,8 +45,8 @@ const onSubmit = (values, onSubmitProps) => {
           progress: undefined,
           theme: "light",
         });
-          onSubmitProps.setSubmitting(false);
-          onSubmitProps.resetForm();
+        onSubmitProps.setSubmitting(false);
+        onSubmitProps.resetForm();
       },
       (error) => {
         toast.error("Message not sent, try again", {
@@ -59,10 +59,10 @@ const onSubmit = (values, onSubmitProps) => {
           progress: undefined,
           theme: "light",
         });
+
+        onSubmitProps.setSubmitting(false);
       }
     );
-
-  console.log(values);
 
   //   console.log(JSON.stringify(values));
 };
@@ -100,7 +100,9 @@ export default function Contact() {
                     Contact Me
                   </h2>
                   <div className=" form-control my-5 ">
-                    <label htmlFor="name" className=" text-2xl font-semibold">
+                    <label
+                      htmlFor="name"
+                      className=" text-2xl font-semibold sm:text-lg">
                       Name
                     </label>
                     <Field
@@ -108,13 +110,15 @@ export default function Contact() {
                       id="name"
                       name="name"
                       placeholder="Enter your name"
-                      className="input input-bordered  w-full  text-xl"
+                      className="input input-bordered  w-full  text-xl input-lg"
                     />
                     <ErrorMessage name="name" component={TextError} />
                   </div>
 
                   <div className=" form-control my-5 ">
-                    <label htmlFor="email" className=" text-2xl font-semibold">
+                    <label
+                      htmlFor="email"
+                      className=" text-2xl font-semibold sm:text-lg">
                       Email
                     </label>
                     <Field
@@ -122,7 +126,7 @@ export default function Contact() {
                       id="email"
                       name="email"
                       placeholder="Enter your email"
-                      className="input input-bordered  w-full  text-xl "
+                      className="input input-bordered  w-full  text-xl  input-lg"
                     />
                     <ErrorMessage name="email">
                       {(errorMsg) => <div className="error">{errorMsg}</div>}
@@ -132,7 +136,7 @@ export default function Contact() {
                   <div className=" form-control my-5 ">
                     <label
                       htmlFor="message"
-                      className=" text-2xl font-semibold  ">
+                      className=" text-2xl font-semibold  sm:text-lg">
                       Message
                     </label>
                     <Field
@@ -152,7 +156,8 @@ export default function Contact() {
                       className=" btn  btn-primary  max-w-sm  text-lg "
                       type="submit"
                       disabled={!formik.isValid || formik.isSubmitting}>
-                      {formik.isSubmitting ? "Sending..." : "Send"} <MdEmail className="text-xl" />
+                      {formik.isSubmitting ? "Sending..." : "Send"}{" "}
+                      <MdEmail className="text-xl" />
                     </button>
                   </div>
                 </div>

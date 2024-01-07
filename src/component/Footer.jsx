@@ -50,7 +50,7 @@ export default function Footer() {
   return (
     <div className=" about-bg py-6   relative ">
       <p className=" text-center  mx-auto">
-        Alright Reserved Chile© {new Date().getFullYear().toString()}
+        All Right Reserved Chile© {new Date().getFullYear().toString()}
       </p>
 
       <motion.div

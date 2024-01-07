@@ -21,8 +21,10 @@ export default function Experience() {
   });
 
   return (
-    <div classNameName=" pb-10  z-0 w-full about-bg  xl:px-10 px-4 lg:px-10  ">
-      <h2 className="  text-6xl font-semibold uppercase py-10  break-all sm:text-5xl md:text-4pxl">
+    <div
+      classNameName=" experience-bg pb-10  z-0 w-full about-bg  xl:px-10 px-4 lg:px-10  "
+>
+      <h2 className="  text-6xl font-semibold uppercase py-10  break-all sm:text-3xl md:text-4pxl lg:mt-5 xl:mt-8">
         {" "}
         Experience
       </h2>

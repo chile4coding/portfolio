@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
+import Aos from "aos";
 const nextVariant = {
   hidden: {
     x: "100vw",
@@ -19,32 +20,27 @@ export default function Tools() {
     target: scrollRef,
     offset: ["-3 1", "1.33 1"],
   });
+  useEffect(()=>{
+
+    Aos.init()
+  },[])
 
   return (
-    <div ref={scrollRef} className=" my-10">
-      <motion.div
-        style={{
-          scale: scrollYProgress,
-
-          opacity: scrollYProgress,
-        }}>
-        <motion.div
-          className=" py-10"
-          variants={nextVariant}
-          whileInView="visible"
-          initial="hidden">
-          <h2 className="  text-6xl font-semibold uppercase py-10  break-all sm:text-5xl md:text-4pxl">
+    <div  className=" my-10" >
+      <div>
+        <div className=" py-10">
+          <h2 className="  text-6xl font-semibold uppercase py-10  break-all sm:text-4xl md:text-4pxl">
             {" "}
             Tools & Tech
           </h2>
 
-          <div className=" grid grid-cols-5 sm:grid-cols-2 gap-10 max-w-[600px]  mx-auto">
+          <div className=" grid grid-cols-5 sm:grid-cols-5 gap-10 max-w-[600px]  mx-auto">
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
               <img
                 src="html.png"
                 alt="html"
                 title="HTML"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
@@ -52,7 +48,7 @@ export default function Tools() {
                 src="css.png"
                 alt="css"
                 title="CSS"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
@@ -60,7 +56,7 @@ export default function Tools() {
                 src="js.png"
                 alt="js"
                 title="JS"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
@@ -68,7 +64,7 @@ export default function Tools() {
                 src="react.png"
                 alt="react"
                 title="Reactjs"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
@@ -76,7 +72,7 @@ export default function Tools() {
                 src="next.png"
                 alt="next"
                 title="Nextjs"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
@@ -84,7 +80,7 @@ export default function Tools() {
                 src="node.png"
                 alt="nodejs"
                 title="Nodejs"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
@@ -92,7 +88,7 @@ export default function Tools() {
                 src="express.png"
                 alt="express"
                 title="Expressjs"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
@@ -100,7 +96,7 @@ export default function Tools() {
                 src="mongo.png"
                 alt="mongodb"
                 title="MongoDB"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
@@ -108,7 +104,7 @@ export default function Tools() {
                 src="postgresql.png"
                 alt="postgresql"
                 title="Postgresql"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
             <div className="rounded-full max-w-[100px] max-h-[100px]   ">
@@ -116,12 +112,12 @@ export default function Tools() {
                 src="git.png"
                 alt="git"
                 title="Git"
-                className="  rounded-full w-full   bg-[white] p-5 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
+                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
               />
             </div>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 }

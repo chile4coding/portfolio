@@ -16,12 +16,12 @@ export default function Projects() {
 
   return (
     <div className=" pb-10  z-0 w-full about-bg  xl:px-10 px-4 lg:px-10  ">
-      <h2 className=" text-6xl font-semibold uppercase py-10  break-all sm:text-5xl md:text-4pxl">
+      <h2 className=" text-6xl font-semibold uppercase py-10  break-all sm:text-3xl md:text-4pxl">
         {" "}
         Projects
       </h2>
       <div className=" grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 ">
-        <p className=" text-2xl font-semibold  leading-8  pb-10">
+        <p className=" text-2xl font-semibold  sm:font-normal sm:text-lg leading-8  pb-10">
           Applications I have been building at my free time using a wide array
           of technology. Some technology included are GitHub, Postgres, Nodejs,
           Expressjs, REST API, Reactjs, Tailwindcss, Nextjs, Javascript,
@@ -52,7 +52,14 @@ export default function Projects() {
                 }>
                 Live Demo
               </button>
-              <FaGithub className=" text-2xl" />
+              <FaGithub
+                className=" text-2xl"
+                onClick={() =>
+                  openProject(
+                    "https://github.com/Visionvoice2023/therapy-app.git"
+                  )
+                }
+              />
             </motion.div>
             <a href="" className=" ">
               <img
@@ -78,7 +85,12 @@ export default function Projects() {
                 }>
                 Live Demo
               </button>
-              <FaGithub className=" text-2xl" />
+              <FaGithub
+                className=" text-2xl"
+                onClick={() =>
+                  openProject("https://github.com/chile4coding/commercefy.git")
+                }
+              />
             </motion.div>
             <a href="" className=" ">
               <img
@@ -102,7 +114,12 @@ export default function Projects() {
                 onClick={() => openProject("https://hrs-one.vercel.app/")}>
                 Live Demo
               </button>
-              <FaGithub className=" text-2xl" />
+              <FaGithub
+                className=" text-2xl"
+                onClick={() =>
+                  openProject("https://github.com/chile4coding/hrs.git")
+                }
+              />
             </motion.div>
             <a href="" className=" ">
               <img
@@ -130,7 +147,14 @@ export default function Projects() {
                 }>
                 Live Demo
               </button>
-              <FaGithub className=" text-2xl" />
+              <FaGithub
+                className=" text-2xl"
+                onClick={() =>
+                  openProject(
+                    "https://github.com/chile4coding/stewart_backend.git"
+                  )
+                }
+              />
             </motion.div>
             <a href="" className=" ">
               <img

@@ -89,7 +89,7 @@ export default function Hero() {
         className=" pb-10  grid grid-cols-2  h-full gap-6 sm:mt-4 md:mt-4  my-10 sm:px-4  md:px-10 sm:grid-cols-1 md:grid-cols-1">
         <div className=" sm:order-2 md:order-2    flex flex-col justify-center  ">
           <h2 className=" text-6xl font-semibold uppercase py-5  break-all sm:text-5xl md:text-4pxl  lg:my-4 xl:my-4  ">
-            <span>Hey I'm, </span>
+            <span className=" normal-case">Hey I'm, </span>
           </h2>
 
           <TypeAnimation
@@ -112,7 +112,7 @@ export default function Hero() {
             repeat={Infinity}
           />
 
-          <p className=" text-2xl font-semibold  leading-8 ">
+          <p className=" text-2xl font-semibold  leading-8 sm:font-semibold sm:text-xl     mt-4">
             I'm a full-stack web developer, breathing life into web <br />{" "}
             applications with my coding magic.
           </p>
@@ -141,7 +141,6 @@ export default function Hero() {
             </motion.a>
             <motion.a
               href="tel:+2348104274522"
-           
               variants={buttonVariants}
               whileHover="hover">
               <IoCallSharp

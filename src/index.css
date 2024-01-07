@@ -32,13 +32,22 @@ overflow-x: hidden;
 
 }
 .about-bg{
-   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% ), url("/cool.png");
+   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% ), url("cool.png");
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
 
 }
 
+.experience-bg{
+
+
+  background-image: url("/public/cool.png");
+     background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+}
 .grow-now{
 
   position: relative;
