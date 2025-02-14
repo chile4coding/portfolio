@@ -12,11 +12,12 @@
   border-bottom: 4px solid black;
 }
 
+html,
 body {
   font-family: "Barlow", sans-serif;
   font-family: "Inter", sans-serif;
   font-family: "Mukta", sans-serif;
-  overflow-x: hidden;
+
   background: rgb(2, 0, 36);
 
   color: white;

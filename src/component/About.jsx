@@ -59,7 +59,10 @@ export default function About() {
         opacity: scrollYProgress,
       }}
     >
-      <div className="z-0 w-full p-10 sm:p-4" style={{ zIndex: 0 }}>
+      <div
+        className="z-0 w-full p-10 sm:p-4 overflow-hidden"
+        style={{ zIndex: 0 }}
+      >
         {/* About Me Section */}
         <motion.section
           initial={{ opacity: 0, x: -50 }}
@@ -98,11 +101,11 @@ export default function About() {
             viewport={{ once: true, amount: 0.2 }}
             className="card py-6 bg-white shadow-xl rounded-md cursor-pointer"
           >
-            <figure className=" max-h-[20rem]">
+            <figure className=" max-h-[20rem] sm:max-h-[5rem]">
               <img src="front.jpg" alt="Frontend" className=" object-cover" />
             </figure>
-            <div className="flex justify-center w-full">
-              <h2 className="card-title text-center text-2xl py-6 text-nav-color">
+            <div className="flex justify-center w-full pt-6">
+              <h2 className="card-title text-center text-2xl sm:text-lg  text-nav-color">
                 Frontend
               </h2>
             </div>
@@ -116,11 +119,11 @@ export default function About() {
             viewport={{ once: true, amount: 0.2 }}
             className="card py-6 bg-white shadow-xl rounded-md cursor-pointer"
           >
-            <figure className=" max-h-[20rem]">
+            <figure className=" max-h-[20rem] sm:max-h-[5rem] ">
               <img src="back.jpg" alt="Backend" className=" object-cover" />
             </figure>
-            <div className="flex justify-center w-full">
-              <h2 className="card-title text-center text-2xl py-6 text-nav-color">
+            <div className="flex justify-center w-full pt-6">
+              <h2 className="card-title text-center text-2xl sm:text-lg  text-nav-color">
                 Backend
               </h2>
             </div>

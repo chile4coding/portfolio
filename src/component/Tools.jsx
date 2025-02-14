@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const ToolsAndTech = () => {
   return (
-    <div className="my-10">
+    <div className="">
       <div>
-        <div className="py-10">
+        <div className="p-10">
           {/* Title Animation */}
           <motion.h2
             className="text-6xl font-semibold uppercase py-10 break-all sm:text-4xl md:text-4xl"
@@ -18,7 +18,7 @@ const ToolsAndTech = () => {
 
           {/* Grid Container Animation */}
           <motion.div
-            className="grid grid-cols-5 sm:grid-cols-5 gap-10 max-w-[600px] mx-auto"
+            className="grid grid-cols-5 sm:grid-cols-3 gap-10 max-w-[600px] mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}

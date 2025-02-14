@@ -240,7 +240,7 @@ export default function Projects() {
   const directions = ["left", "right", "top", "bottom"]; // Different fly-in directions
 
   return (
-    <div className="pb-10 z-0 w-full xl:px-10 px-4 lg:px-10">
+    <div className="pb-10 z-0 w-full xl:px-10 px-4 lg:px-10 overflow-hidden">
       <motion.h2
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}

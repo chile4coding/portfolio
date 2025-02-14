@@ -81,7 +81,7 @@ export default function Hero() {
   };
 
   return (
-    <motion.div ref={scrollRef} className=" z-0">
+    <motion.div ref={scrollRef} className=" z-0 ">
       <motion.section
         variants={containerVariant}
         initial="hidden"

@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <main className=" ">
       <Header />
       <Routes>
         <Route
@@ -33,7 +33,7 @@ function App() {
                 </div>
               }
             >
-              <div className="max-w-[80%]  mx-auto z-0 sm:max-w-[95%] ">
+              <div className="max-w-[90%]  mx-auto z-0 sm:max-w-[95%] ">
                 <LazyHero />
                 <About />
                 <Projects />
@@ -49,7 +49,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </>
+    </main>
   );
 }
 

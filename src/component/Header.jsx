@@ -58,7 +58,7 @@ export default function Header() {
         className=" opacity-90  bg-slate-300  sticky-top  "
         style={{ position: "sticky", top: 0, zIndex: 299 }}
       >
-        <div className=" max-w-[80%]  mx-auto navbar  lg:px-10 xl:px-10 pr-10 py-6 items-center  text-nav-color  ">
+        <div className=" max-w-[100%]  mx-auto navbar  lg:px-10 xl:px-10 pr-10 py-6 items-center  text-nav-color  ">
           <div className=" ">
             <motion.label
               variants={linkVariant}
