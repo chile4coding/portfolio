@@ -181,6 +181,7 @@ export default function Hero() {
           <motion.img
             src="/chile.jpg"
             alt="Chile"
+            loading="lazy"
             className=" scale-x-[-1] sm:max-h-[200px] md:max-h-[350px]   object-cover w-full max-h-[500px] max-w-[600px]  rounded-lg"
           />
         </div>
