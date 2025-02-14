@@ -10,7 +10,7 @@ import Contact from "./component/Contact";
 import Footer from "./component/Footer";
 import Aos from "aos";
 
-const LazyHero = React.lazy(() => import("./component/Hero"));  
+const LazyHero = React.lazy(() => import("./component/Hero"));
 
 function App() {
   useEffect(() => {
@@ -19,37 +19,36 @@ function App() {
     });
   }, []);
 
-
   return (
     <>
-              <Header />
+      <Header />
       <Routes>
         <Route
           path="/"
           element={
             <Suspense
               fallback={
-                <div className="flex justify-center items-center h-screen w-full bg-slate-300">
+                <div className="flex justify-center items-center h-screen w-full bg-nav-color">
                   <span className="loading loading-infinity loading-lg text-6xl"></span>
                 </div>
-              }>
+              }
+            >
               <div className="max-w-[80%]  mx-auto z-0 sm:max-w-[95%] ">
                 <LazyHero />
                 <About />
+                <Projects />
+                <Experience />
 
-                <Tools/>
+                <Tools />
 
-                <Projects/>
-              
-              <Experience/>
-
-              <Contact/>
+                <Contact />
               </div>
             </Suspense>
-          }></Route>
+          }
+        ></Route>
       </Routes>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -48,7 +48,7 @@ export default function Footer() {
   };
 
   return (
-    <div className=" about-bg py-6   relative ">
+    <div className="    relative ">
       <p className=" text-center  mx-auto">
         All Right Reserved Chile© {new Date().getFullYear().toString()}
       </p>
@@ -57,7 +57,8 @@ export default function Footer() {
         variants={loaderVariant}
         inital="animationOne"
         animate="animationOne"
-        className="text-midnigtblue  icon-colors text-6xl   cursor-pointer ml-auto absolute right-6 bottom-4">
+        className="text-midnigtblue  icon-colors text-6xl   cursor-pointer ml-auto absolute right-6 bottom-4"
+      >
         <BsArrowUp
           className="text-midnigtblue  icon-colors text-6xl   "
           onClick={scrollToTop}

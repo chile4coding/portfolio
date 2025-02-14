@@ -86,7 +86,8 @@ export default function Hero() {
         variants={containerVariant}
         initial="hidden"
         animate="visible"
-        className=" pb-10  grid grid-cols-2  h-full gap-6 sm:mt-4 md:mt-4  my-10 sm:px-4  md:px-10 sm:grid-cols-1 md:grid-cols-1">
+        className=" pb-10  grid grid-cols-2  h-full gap-6 sm:mt-4 md:mt-4  my-10 sm:px-4  md:px-10 sm:grid-cols-1 md:grid-cols-1"
+      >
         <div className=" sm:order-2 md:order-2    flex flex-col justify-center  ">
           <h2 className=" text-6xl font-semibold uppercase py-5  break-all sm:text-5xl md:text-4pxl  lg:my-4 xl:my-4  ">
             <span className=" normal-case">Hey I'm, </span>
@@ -107,7 +108,6 @@ export default function Hero() {
             style={{
               fontSize: "2em",
               display: "inline-block",
-              color: "midnightblue",
             }}
             repeat={Infinity}
           />
@@ -123,7 +123,8 @@ export default function Hero() {
               target="_blank"
               variants={buttonVariants}
               whileHover="hover"
-              className=" rounded-full">
+              className=" rounded-full"
+            >
               <FaGithub
                 className=" text-5xl text-midnigtblue  cursor-pointer"
                 title="Github"
@@ -133,7 +134,8 @@ export default function Hero() {
               href="https://www.linkedin.com/in/chileomereji/"
               target="_blank"
               variants={buttonVariants}
-              whileHover="hover">
+              whileHover="hover"
+            >
               <FaLinkedin
                 className=" text-5xl text-midnigtblue  cursor-pointer"
                 title="LinkedIn"
@@ -142,7 +144,8 @@ export default function Hero() {
             <motion.a
               href="tel:+2348104274522"
               variants={buttonVariants}
-              whileHover="hover">
+              whileHover="hover"
+            >
               <IoCallSharp
                 className=" text-5xl text-midnigtblue  cursor-pointer"
                 title="LinkedIn"
@@ -153,11 +156,13 @@ export default function Hero() {
             variants={loaderVariant}
             inital="animationOne"
             animate="animationOne"
-            className="  flex justify-center">
+            className="  flex justify-center"
+          >
             <motion.div
               variants={buttonVariants}
               whileHover="hover"
-              className="rounded-full">
+              className="rounded-full"
+            >
               <Link
                 activeClass="active"
                 to="section1"
@@ -165,7 +170,8 @@ export default function Hero() {
                 smooth={true}
                 offset={10}
                 duration={500}
-                onClick={() => handleSetActive("section1")}>
+                onClick={() => handleSetActive("section1")}
+              >
                 <BsArrowDownCircle className="icon-colors text-6xl  cursor-pointer font-normal " />
               </Link>
             </motion.div>

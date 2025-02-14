@@ -1,123 +1,61 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useScroll } from "framer-motion";
-import Aos from "aos";
-const nextVariant = {
-  hidden: {
-    x: "100vw",
-  },
-  visible: {
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      delay: 0.1,
-    },
-  },
-};
-export default function Tools() {
-  const scrollRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-    offset: ["-3 1", "1.33 1"],
-  });
-  useEffect(()=>{
+import { motion } from "framer-motion";
 
-    Aos.init()
-  },[])
-
+const ToolsAndTech = () => {
   return (
-    <div  className=" my-10" >
+    <div className="my-10">
       <div>
-        <div className=" py-10">
-          <h2 className="  text-6xl font-semibold uppercase py-10  break-all sm:text-4xl md:text-4pxl">
-            {" "}
+        <div className="py-10">
+          {/* Title Animation */}
+          <motion.h2
+            className="text-6xl font-semibold uppercase py-10 break-all sm:text-4xl md:text-4xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}
+          >
             Tools & Tech
-          </h2>
+          </motion.h2>
 
-          <div className=" grid grid-cols-5 sm:grid-cols-5 gap-10 max-w-[600px]  mx-auto">
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="html.png"
-                alt="html"
-                title="HTML"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="css.png"
-                alt="css"
-                title="CSS"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="js.png"
-                alt="js"
-                title="JS"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="react.png"
-                alt="react"
-                title="Reactjs"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="next.png"
-                alt="next"
-                title="Nextjs"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="node.png"
-                alt="nodejs"
-                title="Nodejs"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="express.png"
-                alt="express"
-                title="Expressjs"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="mongo.png"
-                alt="mongodb"
-                title="MongoDB"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="postgresql.png"
-                alt="postgresql"
-                title="Postgresql"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-            <div className="rounded-full max-w-[100px] max-h-[100px]   ">
-              <img
-                src="git.png"
-                alt="git"
-                title="Git"
-                className="  rounded-full w-full   bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px]  w-ful  h-full object-cover"
-              />
-            </div>
-          </div>
+          {/* Grid Container Animation */}
+          <motion.div
+            className="grid grid-cols-5 sm:grid-cols-5 gap-10 max-w-[600px] mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: false }}
+          >
+            {[
+              { src: "html.png", alt: "html", title: "HTML" },
+              { src: "css.png", alt: "css", title: "CSS" },
+              { src: "js.png", alt: "js", title: "JS" },
+              { src: "react.png", alt: "react", title: "Reactjs" },
+              { src: "next.png", alt: "next", title: "Nextjs" },
+              { src: "node.png", alt: "nodejs", title: "Nodejs" },
+              { src: "express.png", alt: "express", title: "Expressjs" },
+              { src: "mongo.png", alt: "mongodb", title: "MongoDB" },
+              { src: "postgresql.png", alt: "postgresql", title: "PostgreSQL" },
+              { src: "git.png", alt: "git", title: "Git" },
+            ].map((tech, index) => (
+              <motion.div
+                key={index}
+                className="rounded-full max-w-[100px] max-h-[100px]"
+                whileInView={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+                viewport={{ once: false }}
+              >
+                <img
+                  src={tech.src}
+                  alt={tech.alt}
+                  title={tech.title}
+                  className="rounded-full w-full bg-[white] p-5 sm:p-2 max-w-[100px] max-h-[100px] w-full h-full object-cover"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default ToolsAndTech;

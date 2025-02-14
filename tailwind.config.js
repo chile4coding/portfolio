@@ -2,19 +2,17 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-     screens: {
-      sm: { min: "0px", max: "640px" },
-      // => @media (min-width: 640px and max-width: 767px) { ... }
-
-      md: { min: "641px", max: "768px" },
-      // md: { min: "768px", max: "1023px" },
-      // => @media (min-width: 768px and max-width: 1023px) { ... }
-
-      lg: { min: "769px", max: "1440px" },
-      // => @media (min-width: 1024px and max-width: 1279px) { ... }
-      xl: { min: "1441px" },
-     },
-    extend: {},
+    screens: {
+      sm: { max: "640px" }, // Mobile-first approach
+      md: { min: "641px", max: "1023px" },
+      lg: { min: "1024px", max: "1439px" },
+      xl: { min: "1440px" }, // No max value needed for xl
+    },
+    extend: {
+      colors: {
+        "nav-color": "rgb(2, 0, 36)",
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
@@ -25,7 +23,6 @@ export default {
     logs: true,
     rtl: false,
     prefix: "",
-    darkTheme: "blue",
+    darkTheme: "white", // Change "blue" to "dark" (valid DaisyUI theme)
   },
 };
-

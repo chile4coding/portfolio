@@ -4,7 +4,6 @@ import { Link, Element, scroller } from "react-scroll";
 import { MdOutlineComputer } from "react-icons/md";
 import { BsPersonWorkspace } from "react-icons/bs";
 
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -21,9 +20,7 @@ export default function Experience() {
   });
 
   return (
-    <div
-      classNameName=" experience-bg pb-10  z-0 w-full about-bg  xl:px-10 px-4 lg:px-10  "
->
+    <div className="   pb-10  z-0 w-full  xl:px-10 px-4 lg:px-10  ">
       <h2 className="  text-6xl font-semibold uppercase py-10  break-all sm:text-3xl md:text-4pxl lg:mt-5 xl:mt-8">
         {" "}
         Experience
@@ -35,19 +32,40 @@ export default function Experience() {
           scale: scrollYProgress,
 
           opacity: scrollYProgress,
-        }}>
+        }}
+      >
         <VerticalTimeline>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work "
+            contentStyle={{
+              background:
+                "radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% )",
+              color: "#fff",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+            date="19-08-2024 - Present"
+            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            icon={<MdOutlineComputer />}
+          >
+            <h3 className="vertical-timeline-element-title text-2xl font-bold">
+              Full Stack Developer
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Ogaticket Enterprise, Atlanta, USA
+            </h4>
+          </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
               background:
                 "radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% )",
-              color: "#000",
+              color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date="2023-12-14 - Present"
+            date="14-12-2023 - Present"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<MdOutlineComputer />}>
+            icon={<MdOutlineComputer />}
+          >
             <h3 className="vertical-timeline-element-title text-2xl font-bold">
               Full Stack Developer
             </h3>
@@ -60,12 +78,13 @@ export default function Experience() {
             contentStyle={{
               background:
                 "radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% )",
-              color: "#000",
+              color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date="2023-03-01 - 2023-08-01 "
+            date="01-03-2023 - 01-08-2023"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<MdOutlineComputer />}>
+            icon={<MdOutlineComputer />}
+          >
             <h3 className="vertical-timeline-element-title text-2xl font-bold">
               Frontend Web Developer
             </h3>
@@ -78,12 +97,13 @@ export default function Experience() {
             contentStyle={{
               background:
                 "radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% )",
-              color: "#000",
+              color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date="2023-08-24 - 2023-10-08 "
+            date="24-08-2023 - 10-08-2023 "
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<MdOutlineComputer />}>
+            icon={<MdOutlineComputer />}
+          >
             <h3 className="vertical-timeline-element-title text-2xl font-bold">
               Backend Engineer
             </h3>
@@ -96,12 +116,13 @@ export default function Experience() {
             contentStyle={{
               background:
                 "radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% )",
-              color: "#000",
+              color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date="2022-12-01 - 2023-03-01"
+            date="01-12-2022 - 01-03-2023"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<BsPersonWorkspace />}>
+            icon={<BsPersonWorkspace />}
+          >
             <h3 className="vertical-timeline-element-title text-2xl font-bold">
               Reactjs Contractor
             </h3>
