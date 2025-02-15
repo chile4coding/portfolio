@@ -196,14 +196,14 @@ const projectData = [
     image: "hrs.png",
     alt: "hospital recommender",
   },
-  {
-    title: "Stewart Collection",
-    description: "An ecommerce store with user and admin dashboard",
-    liveLink: "https://stewart-frontend-chile4coding.vercel.app/",
-    repoLink: "https://github.com/chile4coding/stewart_backend.git",
-    image: "stewart.png",
-    alt: "stewart",
-  },
+  // {
+  //   title: "Stewart Collection",
+  //   description: "An ecommerce store with user and admin dashboard",
+  //   liveLink: "https://stewart-frontend-chile4coding.vercel.app/",
+  //   repoLink: "https://github.com/chile4coding/stewart_backend.git",
+  //   image: "stewart.png",
+  //   alt: "stewart",
+  // },
 ];
 
 // Motion Variants
@@ -276,7 +276,7 @@ export default function Projects() {
           opacity: scrollYProgress,
         }}
       >
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid grid-cols-3 gap-10 md:grid-cols-2 sm:grid-cols-1">
           {projectData.map((project, index) => (
             <motion.div
               key={project.title}
