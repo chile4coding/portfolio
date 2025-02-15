@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import resume from "../assets/resume.pdf";
 
 import {
   Link,
@@ -159,7 +160,7 @@ export default function Drawer() {
           >
             <a
               download="resume.pdf"
-              href="./src/assets/resume.pdf"
+              href={resume}
               className="text-nav-color hover:border-b-4  border-b-slate-900 cursor-pointer  pb-2"
             >
               Download CV

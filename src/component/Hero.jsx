@@ -177,12 +177,12 @@ export default function Hero() {
             </motion.div>
           </motion.div>
         </div>
-        <div className="    flex   items-center   sm:order-1 md:order-1">
+        <div className="    flex   items-center   sm:order-1 md:order-1 max-h-[500px] sm:max-h-[200px] md:max-h-[350px] h-[100%]">
           <motion.img
             src="/chile.jpg"
             alt="Chile"
             loading="lazy"
-            className=" scale-x-[-1] sm:max-h-[200px] md:max-h-[350px]   object-cover w-full max-h-[500px] max-w-[600px]  rounded-lg h-[100%]"
+            className=" scale-x-[-1] sm:max-h-[200px] md:max-h-[350px]   object-cover w-full max-h-[500px]  rounded-lg h-[100%]"
           />
         </div>
       </motion.section>
