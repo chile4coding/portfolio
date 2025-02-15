@@ -104,8 +104,8 @@ export default function Contact() {
         >
           <form className=" py-10" onSubmit={formik.handleSubmit}>
             <Element name="contact" className="section">
-              <div className="  card shadow-md max-w-[70rem]  p-10 mx-auto">
-                <h2 className="  text-6xl font-semibold uppercase py-10  sm:py-3 break-all sm:text-3xl md:text-4pxl">
+              <div className="  card shadow-md max-w-[70rem]  p-10 mx-auto sm:p-4">
+                <h2 className="  text-6xl font-semibold uppercase py-10  sm:py-3 break-all sm:text-3xl md:text-4pxl ">
                   {" "}
                   Contact Me
                 </h2>

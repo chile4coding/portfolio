@@ -4,7 +4,7 @@ const ToolsAndTech = () => {
   return (
     <div className="">
       <div>
-        <div className="p-10">
+        <div className="p-10 sm:p-4">
           {/* Title Animation */}
           <motion.h2
             className="text-6xl font-semibold uppercase py-10 break-all sm:text-4xl md:text-4xl"

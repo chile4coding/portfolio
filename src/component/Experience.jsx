@@ -20,7 +20,7 @@ export default function Experience() {
   });
 
   return (
-    <div className="  overflow-hidden  pb-10  z-0 w-full  xl:px-10 px-4 lg:px-10  ">
+    <div className="  overflow-hidden  pb-10  z-0 w-full  xl:px-10 px-4 lg:px-10 sm:p-4 ">
       <h2 className="  text-6xl font-semibold uppercase py-10  break-all sm:text-3xl md:text-4pxl lg:mt-5 xl:mt-8">
         {" "}
         Experience
