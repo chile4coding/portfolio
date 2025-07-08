@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import resume from "../assets/resume.pdf";
 import { motion } from "framer-motion";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-} from "react-scroll";
+import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
 
 import Drawer from "./Drawer";
 export const linkVariant = {
@@ -27,10 +20,10 @@ export default function Header() {
 
   useEffect(() => {
     // Registering the 'begin' event and logging it to the console when triggered.
-    Events.scrollEvent.register("begin", (to, element) => {});
+    Events.scrollEvent.register("begin", () => {});
 
     // Registering the 'end' event and logging it to the console when triggered.
-    Events.scrollEvent.register("end", (to, element) => {});
+    Events.scrollEvent.register("end", () => {});
 
     // Updating scrollSpy when the component mounts.
     scrollSpy.update();
@@ -47,7 +40,7 @@ export default function Header() {
   };
 
   const handleSetActive = (to) => {
-    setActive((prev) => to);
+    setActive(() => to);
   };
 
   return (
@@ -56,8 +49,7 @@ export default function Header() {
 
       <div
         className=" opacity-90  bg-slate-300  sticky-top  "
-        style={{ position: "sticky", top: 0, zIndex: 299 }}
-      >
+        style={{ position: "sticky", top: 0, zIndex: 299 }}>
         <div className=" max-w-[100%]  mx-auto navbar  lg:px-10 xl:px-10 pr-10 py-6 items-center  text-nav-color  ">
           <div className=" ">
             <motion.label
@@ -65,20 +57,17 @@ export default function Header() {
               whileHover="visible"
               transition="transition"
               htmlFor="my-drawer"
-              className="btn  btn-square btn-ghost  lg:hidden xl:hidden "
-            >
+              className="btn  btn-square btn-ghost  lg:hidden xl:hidden ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-5 h-5 stroke-current"
-              >
+                className="inline-block w-5 h-5 stroke-current">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
+                  d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </motion.label>
           </div>
@@ -91,8 +80,7 @@ export default function Header() {
                 initial={{ y: -250 }}
                 animate={{ y: 0 }}
                 onClick={scrollToTop}
-                className="list-none font-bold text-5xl  cursor-pointer"
-              >
+                className="list-none font-bold text-5xl  cursor-pointer">
                 C
               </motion.li>
             </div>
@@ -101,8 +89,7 @@ export default function Header() {
                 variants={linkVariant}
                 whileHover="visible"
                 transition="transition"
-                className=" list-none  font-semibold text-lg  cursor-pointer"
-              >
+                className=" list-none  font-semibold text-lg  cursor-pointer">
                 <Link
                   activeClass="active"
                   to="section1"
@@ -113,8 +100,7 @@ export default function Header() {
                   onClick={() => handleSetActive("section1")}
                   className={`hover:border-b-4  border-b-slate-900  pb-2 ${
                     active === "section1" ? "active" : " notActive"
-                  }`}
-                >
+                  }`}>
                   About
                 </Link>
               </motion.li>
@@ -122,8 +108,7 @@ export default function Header() {
                 variants={linkVariant}
                 whileHover="visible"
                 transition="transition"
-                className=" list-none  font-semibold text-lg  cursor-pointer "
-              >
+                className=" list-none  font-semibold text-lg  cursor-pointer ">
                 <Link
                   activeClass="active"
                   to="project"
@@ -134,8 +119,7 @@ export default function Header() {
                   onClick={() => handleSetActive("project")}
                   className={`hover:border-b-4  border-b-slate-900  pb-2 ${
                     active === "project" ? "active" : "notActive"
-                  }`}
-                >
+                  }`}>
                   Projects
                 </Link>
               </motion.li>
@@ -143,8 +127,7 @@ export default function Header() {
                 variants={linkVariant}
                 whileHover="visible"
                 transition="transition"
-                className=" list-none  font-semibold text-lg  cursor-pointer "
-              >
+                className=" list-none  font-semibold text-lg  cursor-pointer ">
                 <Link
                   activeClass="active"
                   to="experience"
@@ -155,8 +138,7 @@ export default function Header() {
                   onClick={() => handleSetActive("experience")}
                   className={`hover:border-b-4  border-b-slate-900  pb-2 ${
                     active === "experience" ? "active" : "notActive"
-                  }`}
-                >
+                  }`}>
                   Experience
                 </Link>
               </motion.li>
@@ -165,8 +147,7 @@ export default function Header() {
                 variants={linkVariant}
                 whileHover="visible"
                 transition="transition"
-                className=" list-none  font-semibold text-lg  cursor-pointer "
-              >
+                className=" list-none  font-semibold text-lg  cursor-pointer ">
                 <Link
                   activeClass="active"
                   to="contact"
@@ -177,8 +158,7 @@ export default function Header() {
                   onClick={() => handleSetActive("contact")}
                   className={`hover:border-b-4  border-b-slate-900  pb-2 ${
                     active === "contact" ? "active" : "notActive"
-                  }`}
-                >
+                  }`}>
                   Contact
                 </Link>
               </motion.li>
@@ -187,13 +167,11 @@ export default function Header() {
                 variants={linkVariant}
                 whileHover="visible"
                 transition="transition"
-                className=" list-none  font-semibold text-lg "
-              >
+                className=" list-none  font-semibold text-lg ">
                 <a
                   download="resume.pdf"
                   href={resume}
-                  className="hover:border-b-4  border-b-slate-900 cursor-pointer  pb-2"
-                >
+                  className="hover:border-b-4  border-b-slate-900 cursor-pointer  pb-2">
                   Download CV
                 </a>
               </motion.li>

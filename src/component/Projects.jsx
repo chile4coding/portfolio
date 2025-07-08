@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
-import { Link, Element, scroller } from "react-scroll";
+import { Element } from "react-scroll";
 import { FaGithub } from "react-icons/fa";
 
 // export default function Projects() {
@@ -173,6 +173,15 @@ import { FaGithub } from "react-icons/fa";
 
 const projectData = [
   {
+    title: "Invoice Management System",
+    description:
+      " This is a financial dashboard for managing customer invoices and tracking payment status, built for business accounting purpose",
+    liveLink: "https://invoicing-test.invexerp.io/",
+    repoLink: "",
+    image: "invoicing.png",
+    alt: "Invoicing System",
+  },
+  {
     title: "Therapy Application",
     description: "A platform for booking therapy sessions",
     liveLink: "https://therapy-app-chile4coding.vercel.app/",
@@ -181,20 +190,13 @@ const projectData = [
     alt: "therapy",
   },
   {
-    title: "Commercefy",
-    description: "A platform that simplifies small business transactions",
-    liveLink: "https://commercefyhere.netlify.app/",
+    title: "Organizer Platform",
+    description:
+      "This is a web application that showcase event organizer events",
+    liveLink: "https://organizerzone.vercel.app/",
     repoLink: "https://github.com/chile4coding/commercefy.git",
-    image: "commercefy.png",
-    alt: "commercefy",
-  },
-  {
-    title: "Hospital Recommender",
-    description: "An online system that recommends hospitals to patients",
-    liveLink: "https://hrs-one.vercel.app/",
-    repoLink: "https://github.com/chile4coding/hrs.git",
-    image: "hrs.png",
-    alt: "hospital recommender",
+    image: "organizer.png",
+    alt: "Organizer",
   },
   // {
   //   title: "Stewart Collection",
@@ -246,8 +248,7 @@ export default function Projects() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ amount: 0.2 }}
-        className="text-6xl font-semibold uppercase py-10 break-all sm:text-3xl md:text-4xl"
-      >
+        className="text-6xl font-semibold uppercase py-10 break-all sm:text-3xl md:text-4xl">
         Projects
       </motion.h2>
       <motion.div
@@ -255,8 +256,7 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         viewport={{ once: true, amount: 0.2 }}
-        className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1"
-      >
+        className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
         <p className="font-semibold sm:font-normal sm:text-lg leading-8 pb-10">
           Applications I have been building at my free time using a wide array
           of technology. Some technology included are GitHub, Postgres, Nodejs,
@@ -274,8 +274,7 @@ export default function Projects() {
           scale: scrollYProgress,
 
           opacity: scrollYProgress,
-        }}
-      >
+        }}>
         <div className="grid grid-cols-3 gap-10 md:grid-cols-2 sm:grid-cols-1">
           {projectData.map((project, index) => (
             <motion.div
@@ -288,33 +287,34 @@ export default function Projects() {
             >
               <motion.div
                 whileHover={{ opacity: 0.9, y: -5 }}
-                className="backdrop p-4 bg-white shadow-lg rounded-lg"
-              >
+                className="backdrop p-4 bg-white shadow-lg rounded-lg">
                 <h2 className="text-lg font-bold">{project.title}</h2>
                 <p className="sm:text-xs">{project.description}</p>
                 <button
                   className="btn mb-2 bg-blue-500 text-white px-4 py-2 rounded mt-2"
-                  onClick={() => window.open(project.liveLink, "_blank")}
-                >
+                  onClick={() => window.open(project.liveLink, "_blank")}>
                   Live Demo
                 </button>
-                <FaGithub
-                  className="text-2xl cursor-pointer ml-2"
-                  onClick={() => window.open(project.repoLink, "_blank")}
-                />
+                {project.repoLink && (
+                  <FaGithub
+                    className="text-2xl cursor-pointer ml-2"
+                    onClick={() => window.open(project.repoLink, "_blank")}
+                  />
+                )}
               </motion.div>
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={project.image}
-                  alt={project.alt}
-                  title={project.alt}
-                  className="bg-white p-5 w-full h-full object-cover"
-                />
-              </a>
+              <div className="max-h-[20rem]">
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    title={project.alt}
+                    className="bg-white p-5  object-cover"
+                  />
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>
